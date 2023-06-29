@@ -2,13 +2,14 @@
 
 A small script to customize a project generated from [rules-template](https://github.com/bazel-contrib/rules-template).
 
-Install to a directory in you `$PATH`, e.g.: `~/.local/bin`:
+Install to a directory in `$PATH` and run the script inside the new project:
 
 ```bash
-curl -o ~/.local/bin/rules-template.sh https://raw.githubusercontent.com/bzlparty/rules-template.sh/main/rules-template.sh
-chmod +x ~/.local/bin/rules-template.sh
+rules-template.sh myorga mylang
 ```
 
+Run with `bazel` from a local copy of this repository:
+
 ```bash
-rules-template.sh my_orga my_lang
+bazel run :rules_template -- /path/to/repo myorga mylang
 ```
